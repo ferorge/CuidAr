@@ -1,0 +1,262 @@
+@charset "UTF-8";
+body {
+background-color : #0D0D0D ;
+box-sizing : border-box ;
+color : #F2F2F2 ;
+padding : 2px ;
+height : 100% ;
+font-family : "Lato", sans-serif ;
+}
+
+ul {
+list-style : none ;
+overflow : hidden ;
+}
+
+header {
+height : 80% ;
+padding : 16px ;
+width : 97% ;
+}
+
+nav {
+height : 10% ;
+padding : 5px ;
+}
+
+nav > h2 {
+float : left ;
+width : 100px ;
+}
+
+section {
+height : 60% ;
+padding : 16px ;
+width : 97% ;
+}
+
+footer {
+border-top : 3px solid #DB222D ;
+height : 15% ;
+padding : 16px ;
+width : 97% ;
+}
+
+nav > ul > li {
+border : 2px solid #DB222D ;
+border-radius : 5px 0px 5px 0px ;
+cursor : pointer ;
+float : left ;
+font-size : 17px ;
+margin : 10px ;
+transform : skew(-45deg,0deg) ;
+}
+
+nav > ul > li > a {
+width : 126px ;
+background-color : #000080 ;
+color : #F2F2F2 ;
+display : block ;
+padding : 3px 20px ;
+text-align : center ;
+text-decoration : none ;
+-webkit-transition-duration : 0.3s ;
+transition-duration : 0.3s ;
+}
+
+nav > ul > li > a.active {
+background-color : #DB222D ;
+color : #F2F2F2 ;
+font-weight : bold ;
+}
+
+nav > ul > li > a:hover {
+background-color : #F2F2F2 ;
+color : #0D0D0D ;
+font-weight : normal ;
+}
+
+nav > ul > li > a > span {
+display : block ;
+transform : skew(45deg,0deg) ;
+}
+
+aside {
+background-color : #0D0D0D ;
+border-right : 8px solid #DB222D ;
+float : left ;
+height : 100% ;
+left : 0 ;
+overflow : hidden ;
+position : fixed ;
+top : 0 ;
+transition : 0.5s ;
+-webkit-transition-duration : 0.5s ;
+width : 0px ;
+z-index : 1 ;
+}
+
+aside:hover {
+background-color : #0D0D0D ;
+border-right : 8px solid #DB222D ;
+color : #F2F2F2 ;
+width : 600px ;
+}
+
+aside a {
+color : #F2F2F2 ;
+font-size : 16px ;
+padding : 4px 0px 4px 0px ;
+text-decoration : none ;
+}
+
+ol {
+list-style : none ;
+padding : 0px ;
+margin : 0px 0px 0px -10px ;
+}
+
+blockquote {
+margin : 0 ;
+}
+
+h3 {
+font-size : 24px ;
+margin : 0px 10px 0px 10px ;
+padding : 4px 0px 4px 10px ;
+border-bottom : 10px solid #DB222D ;
+}
+
+.T0, .T1, .T2, .T3, .T4, .T5, .T6, .T7, .T8 {
+display : none ;
+border-bottom : 3px solid #F2F2F2 ;
+margin-right : 10px ;
+}
+
+.M0:hover .T0 {
+display : block ;
+}
+
+.M1:hover .T1 {
+display : block ;
+}
+
+.M2:hover .T2 {
+display : block ;
+}
+
+.M3:hover .T3 {
+display : block ;
+}
+
+.M4:hover .T4 {
+display : block ;
+}
+
+.M5:hover .T5 {
+display : block ;
+}
+
+.M6:hover .T6 {
+display : block ;
+}
+
+.M7:hover .T7 {
+display : block ;
+}
+
+.M8:hover .T8 {
+display : block ;
+}
+
+fieldset {
+border-radius : 5px ;
+border : 1px solid white ;
+padding : 20px 20px 60px 20px  ;
+}
+
+legend {
+background-color : #000080 ;
+border : 2px solid #DB222D ;
+border-radius : 5px ;
+color : #F2F2F2 ;
+font-size : 16px ;
+padding : 3px 25px ;
+text-align : center ;
+}
+
+label {
+box-sizing : border-box ;
+padding : 0px 0px 4px 0 ;
+display : inline-block ;
+width : 90% ;
+}
+
+input {
+border : 1px solid #DB222D ;
+border-radius : 4px ;
+box-sizing : border-box ;
+padding : 12px ;
+resize : vertical ;
+width : 96% ;
+}
+
+button {
+background-color : #000080 ;
+border : 1px solid #DB222D ;
+border-radius : 4px ;
+box-sizing : border-box ;
+color : #F2F2F2 ;
+cursor : pointer ;
+float : right ;
+font-size : 16px ;
+margin : -25px 20px 0px 0px ;
+padding : 12px 20px ;
+-webkit-transition-duration : 0.3s ;
+transition-duration : 0.3s ;
+}
+
+button:hover {
+background-color : #F2F2F2 ;
+color : #0D0D0D ;
+}
+
+em {
+box-sizing : border-box ;
+color : #DB222D ;
+display : inline-block ;
+font-weight : bold ;
+padding : 5px ;
+width : 4% ;
+}
+
+footer a {
+border : 2px solid #DB222D ;
+border-radius : 5px 0px 5px 0px ;
+cursor : pointer ;
+float : left ;
+font-size : 16px ;
+margin : 10px ;
+transform : skew(-45deg,0deg) ;
+width : 115px ;
+background-color : #000080 ;
+color : #F2F2F2 ;
+display : block ;
+padding : 3px 25px ;
+text-align : center ;
+font-weight : normal ;
+text-decoration : none ;
+-webkit-transition-duration : 0.3s ;
+transition-duration : 0.3s ;
+}
+
+footer a:hover {
+background-color : #F2F2F2 ;
+color : #0D0D0D ;
+}
+
+footer a span {
+display : block ;
+transform : skew(45deg,0deg) ;
+}
+
