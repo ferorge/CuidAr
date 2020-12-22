@@ -18,7 +18,7 @@ class eventos:
         self.fichero = self.directorio + modulo + '.log'
         logging.basicConfig(filename=self.fichero, level=logging.DEBUG,
             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-        return print(self.fichero)
+        return self.fichero
     
     def debug(self, mensaje):
         logging.debug(mensaje)

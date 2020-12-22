@@ -10,13 +10,27 @@ import configApp
 
 
 def BD():
+    """Crea una instancia de SQL para conexión a BBDD.
+    
+    Indicar el path al fichero de conexión.
+    
+    >>> print(BD().pathcfg)
+    configApp/.CuidAr.cfg
+    """
     bd = configApp.mariaDB.SQL()
-    bd.pathcfg = '../electricAr.cfg'
+    bd.pathcfg = 'configApp/.CuidAr.cfg'
     bd.VerificarConexion()
     return bd
 
 
 def GUI():
+    """Crea una instancia de HTML5 para generar una GUI web.
+    
+    Indicar los atributos comunes a todos los sitios.
+    
+    >>> print(GUI().charset)
+    UTF-8
+    """
     gui = configApp.html5.HTML5()
     gui.lang = "es"
     gui.keywords = 'sistema, gestion, calidad'
@@ -33,6 +47,13 @@ def GUI():
 
 
 def initApp():
+    """Inicia la aplicación web.
+    
+    Importa todos los módulos que conforman la aplicación y crea 
+    la base de datos, las tablas, vistas y procedimientos almacenados.
+    
+    Agregar doctest
+    """
     import BLO
     bloConfig = BLO.configurar()
     bloConfig.reset(bd)
@@ -64,6 +85,8 @@ try:
         except:
             import sys
             print(sys.exc_info())
+            import doctest
+            doctest.testmod()
     else:
         pass
 except ImportError:
