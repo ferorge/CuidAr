@@ -8,8 +8,19 @@ import configApp
 
 
 def configurar():
-    """Docstring"""
-    ###########################################################################
+    """Configura las pistas de auditoría de la aplicación.
+    
+    Generar una instancia del objeto CREAR para crear la tabla, la vista y el procedimiento almacenado.
+    
+    Indicar los atributos por cada tabla, vista y procedimiento almacenado.
+    
+    Ejecutar el método CrearCampo por cada campo necesario.
+    
+    Esta función es ejecutada por la función initApp del módulo INIT.py
+
+    >>> print(configurar().NombrePA)
+    PDAC
+    """
 
     PDA = configApp.mariaDB.CREAR()
     PDA.NumeroTabla = '0010'
@@ -97,17 +108,7 @@ def configurar():
                    comentario='¿Dónde? Id de tabla dónde se creó el registro',
                    label='Id de tabla',
                    name=PDA.campo)
-
-    ###########################################################################
-
     return PDA
-
-
-####################################
-# sitio.TablaTitulo = 'Campos'
-# sitio.TablaEncabezado = db.cabecera
-# sitio.TablaFilas = db.filas
-####################################
 
 
 # Programa principal
@@ -116,15 +117,28 @@ def configurar():
 try:
     if __name__ == '__main__':
         try:
+            """
+            Obtiene la conexión a la BBDD y los atributos comunes a todos 
+            los sitios del modulo INIT.
+            
+            Vincula los parámetros almacenados en la BBDD con la GUI web.
+            
+            Debe indicarse como parámetro del método ObtenerParametros el valor
+            del atributo NumeroTabla indicado en la función configurar().
+            """
             import INIT
             bd = INIT.BD()
             sitio = INIT.GUI()
             sitio.InputList = bd.ObtenerParametros('0010')
+            print(sitio.InputList)
             print(sitio.Html(sitio.Body6()))
         except:
             import sys
             print(sys.exc_info())
+            import doctest
+            doctest.testmod()
     else:
-        print('PDA importado')
+        # Módulo importado
+        pass
 except ImportError:
     print('error al importar PDA.py')

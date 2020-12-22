@@ -1,17 +1,26 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Fri Nov 13 08:12:02 2020
-
-@author: fernando
+@author: Fernando Orge
 """
 
 import configApp
 
 
 def configurar():
-    """Docstring"""
-    ###########################################################################
+    """Configura los campos de la aplicación.
+    
+    Generar una instancia del objeto CREAR para crear la tabla, la vista y el procedimiento almacenado.
+    
+    Indicar los atributos por cada tabla, vista y procedimiento almacenado.
+    
+    Ejecutar el método CrearCampo por cada campo necesario.
+    
+    Esta función es ejecutada por la función initApp del módulo INIT.py
+
+    >>> print(configurar().NombrePA)
+    CAMC
+    """
 
     CAM = configApp.mariaDB.CREAR()
     CAM.NumeroTabla = '0040'
@@ -381,17 +390,7 @@ def configurar():
                    comentario='Parámetro para input',
                    label=CAM.campo,
                    name=CAM.campo)
-
-    ###########################################################################
-
     return CAM
-
-
-####################################
-# sitio.TablaTitulo = 'Campos'
-# sitio.TablaEncabezado = db.cabecera
-# sitio.TablaFilas = db.filas
-####################################
 
 
 # Programa principal
@@ -400,6 +399,15 @@ def configurar():
 try:
     if __name__ == '__main__':
         try:
+            """
+            Obtiene la conexión a la BBDD y los atributos comunes a todos 
+            los sitios del modulo INIT.
+            
+            Vincula los parámetros almacenados en la BBDD con la GUI web.
+            
+            Debe indicarse como parámetro del método ObtenerParametros el valor
+            del atributo NumeroTabla indicado en la función configurar().
+            """
             import INIT
             bd = INIT.BD()
             sitio = INIT.GUI()
@@ -408,7 +416,10 @@ try:
         except:
             import sys
             print(sys.exc_info())
+            import doctest
+            doctest.testmod()
     else:
-        print('CAM importado')
+        # Módulo importado
+        pass
 except ImportError:
     print('error al importar CAM.py')

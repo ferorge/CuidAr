@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Fri Nov 13 08:12:02 2020
-
 @author: fernando
 """
 
@@ -75,6 +73,13 @@ def initApp():
 # Programa principal
 
 
+####################################
+# sitio.TablaTitulo = ''
+# sitio.TablaEncabezado = db.cabecera
+# sitio.TablaFilas = db.filas
+####################################
+
+
 try:
     if __name__ == '__main__':
         try:
@@ -88,6 +93,7 @@ try:
             import doctest
             doctest.testmod()
     else:
+        # Módulo importado
         pass
 except ImportError:
     print('error al importar INIT.py')

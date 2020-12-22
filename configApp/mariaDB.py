@@ -92,6 +92,7 @@ class SQL():
         except Error as error:
             self.VerificarConexion()
             self.error = str(error)
+            print(self.error)
     def AbrirPuntero(self, servidor):
         try:
             self.puntero = servidor.cursor()
