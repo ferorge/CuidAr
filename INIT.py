@@ -68,6 +68,10 @@ def initApp():
     camConfig = CAM.configurar()
     camConfig.reset(bd)
     bd.RegistrarCampos(camConfig)
+    import TRA
+    traConfig = TRA.configurar()
+    traConfig.reset(bd)
+    bd.RegistrarCampos(traConfig)
 
 
 # Programa principal
